@@ -33,6 +33,10 @@ a:hover {
     color: var(--primary);
     box-shadow: var(--shadow);
     border-bottom: 1.5px solid #e4e9f2;
+    position: relative;
+    /* Needed for absolute positioning of mobile nav */
+    z-index: 100;
+    /* Ensure header is above other content */
 }
 
 .header .container {
@@ -51,17 +55,144 @@ a:hover {
     gap: 0.6em;
     font-weight: 700;
     letter-spacing: -.02em;
+    flex-shrink: 0;
+    /* Prevents logo from shrinking on small screens */
 }
 
-.header nav a {
+/* Desktop Navigation Styles */
+.header .main-nav a {
+    /* Updated selector to target .main-nav */
     margin-left: 2em;
     font-weight: 500;
     color: var(--primary);
+    text-decoration: none;
+    /* Ensure no underline by default */
 }
 
-.header nav a:hover {
+.header .main-nav a:hover {
     color: var(--accent);
 }
+
+/* ------------------------------------- */
+/* NEW CSS for Mobile Responsiveness (Header/Nav) */
+/* ------------------------------------- */
+
+/* Hide the toggle button by default (desktop) */
+.menu-toggle {
+    display: none;
+    /* Hidden on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em;
+    z-index: 1001;
+    /* Ensure it's above other content if overlaying */
+    position: relative;
+    /* For hamburger line positioning */
+    width: 35px;
+    /* Give it a fixed width */
+    height: 25px;
+    /* Give it a fixed height */
+    justify-content: center;
+    /* For centering lines if needed */
+    align-items: center;
+    /* For centering lines if needed */
+    flex-direction: column;
+    /* For stacking hamburger lines */
+}
+
+.hamburger {
+    display: block;
+    width: 100%;
+    /* Make lines fill the toggle width */
+    height: 3px;
+    background-color: var(--primary);
+    margin: 4px 0;
+    /* Space between lines */
+    transition: all 0.3s ease-in-out;
+    border-radius: 2px;
+    /* Slightly rounded ends for lines */
+}
+
+/* Main Navigation for Mobile - initially hidden and vertical */
+@media (max-width: 768px) {
+    .header .container {
+        padding: 0.8rem 1.2rem;
+        /* Slightly reduced padding for smaller screens */
+    }
+
+    /* Show the toggle button */
+    .menu-toggle {
+        display: flex;
+        /* Display hamburger icon */
+    }
+
+    /* Hide the desktop navigation */
+    .header .main-nav {
+        display: none;
+        /* Hidden by default on mobile */
+        flex-direction: column;
+        /* Stack links vertically */
+        position: absolute;
+        /* Position it for overlay */
+        top: 100%;
+        /* Below the header */
+        left: 0;
+        width: 100%;
+        background: var(--bg);
+        /* Use background variable for consistency */
+        box-shadow: var(--shadow);
+        border-top: 1.5px solid #e4e9f2;
+        padding: 1rem 0;
+        z-index: 99;
+        /* Below header, above page content */
+    }
+
+    /* Style individual links in mobile menu */
+    .header .main-nav a {
+        margin: 0;
+        /* Remove left margin */
+        padding: 0.8rem 1.5rem;
+        /* Add vertical padding for touch targets */
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        /* Optional separator */
+        width: 100%;
+        /* Make links full width */
+        text-align: center;
+        /* Center text */
+        box-sizing: border-box;
+        /* Include padding in width */
+    }
+
+    .header .main-nav a:last-child {
+        border-bottom: none;
+        /* No border on the last link */
+    }
+
+    /* JavaScript will add this class when menu is open */
+    .header .main-nav.active {
+        display: flex;
+        /* Show the menu when active */
+    }
+
+    /* Hamburger animation to 'X' */
+    .menu-toggle.active .hamburger:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.active .hamburger:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .hamburger:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
+
+/* ------------------------------------- */
+/* END NEW CSS for Mobile Responsiveness */
+/* ------------------------------------- */
+
 
 main {
     padding-bottom: 3rem;
@@ -366,6 +497,7 @@ main {
     display: none;
 }
 
+/* GENERAL MEDIA QUERIES (Existing) */
 @media (max-width: 900px) {
     .hero-content {
         flex-direction: column-reverse;
@@ -389,12 +521,39 @@ main {
 @media (max-width: 600px) {
     .container {
         padding: 1.1rem 0.4rem 0.4rem 0.4rem;
+        /* Adjusted for tighter mobile spacing */
     }
 
     .hero-image img {
         max-width: 96vw;
     }
+
+    /* Adjust font sizes for smaller screens */
+    .hero-text h1 {
+        font-size: 2em;
+        /* Smaller heading on very small screens */
+    }
+
+    .hero-text p {
+        font-size: 1.1em;
+        /* Slightly smaller body text */
+    }
+
+    .cta-btn {
+        font-size: 1em;
+        /* Smaller button text */
+        padding: 0.8em 1.8em;
+    }
+
+    .pricing-title {
+        font-size: 1.8em;
+    }
+
+    .pricing-subtitle {
+        font-size: 1em;
+    }
 }
+
 
 /* Pricing Section Styles */
 .pricing-section {
@@ -439,12 +598,14 @@ main {
 }
 
 .pricing-card.popular {
-    background: #5a91ff;
+    background: var(--accent);
+    /* Use var(--accent) */
     color: #fff;
     box-shadow: 0 6px 24px #5a91ff22;
     z-index: 1;
     transform: scale(1.045);
-    border: 2px solid #5a91ff;
+    border: 2px solid var(--accent);
+    /* Use var(--accent) */
 }
 
 .popular-badge {
@@ -470,7 +631,8 @@ main {
 
 .pricing-desc {
     font-size: 0.92em;
-    color: rgb(45, 62, 80);
+    color: var(--primary);
+    /* Use var(--primary) */
     margin-bottom: 0.9em;
     height: 3em;
 }
@@ -506,7 +668,8 @@ main {
 
 .pricing-features li:before {
     content: '✓';
-    color: #5a91ff;
+    color: var(--accent);
+    /* Use var(--accent) */
     font-weight: bold;
     position: absolute;
     left: 0;
@@ -519,7 +682,8 @@ main {
 
 .pricing-btn {
     margin-top: auto;
-    background: #5a91ff;
+    background: var(--accent);
+    /* Use var(--accent) */
     color: #fff;
     padding: .65em 1.5em;
     border-radius: 7px;
@@ -536,17 +700,18 @@ main {
 
 .pricing-card.popular .pricing-btn {
     background: #ffd600;
-    color: #23272f;
+    color: var(--primary);
+    /* Use var(--primary) */
     box-shadow: 0 1.5px 7px #ffd60033;
 }
 
 .pricing-btn:hover {
-    background: #23272f;
+    background: var(--primary);
     color: #fff;
 }
 
 .pricing-card.popular .pricing-btn:hover {
-    background: #23272f;
+    background: var(--primary);
     color: #ffd600;
 }
 
@@ -582,17 +747,17 @@ main {
 
 .carousel-track {
     width: 1000px;
-    /* previously 430px, make this as big as you want */
     height: 550px;
-    /* previously 255px, adjust for desired height */
     overflow: hidden;
     border-radius: 16px;
-    box-shadow: 0 2px 18px #b7cfff33;
+    box-shadow: var(--shadow);
+    /* Use var(--shadow) */
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    background: #f7faff;
+    background: var(--bg);
+    /* Use var(--bg) */
 }
 
 .carousel-slide {
@@ -603,7 +768,6 @@ main {
     transition: opacity .4s;
     border-radius: 16px;
     width: 100%;
-    /* ensures image fills the track */
     height: 100%;
     object-fit: contain;
 }
@@ -613,15 +777,18 @@ main {
 }
 
 .carousel-btn {
-    background: #fff;
+    background: var(--card-bg);
+    /* Use var(--card-bg) */
     border: none;
     font-size: 2em;
-    color: #5a91ff;
+    color: var(--accent);
+    /* Use var(--accent) */
     width: 44px;
     height: 44px;
     border-radius: 50%;
     margin: 0 0.5em;
-    box-shadow: 0 2px 8px #b7cfff33;
+    box-shadow: var(--shadow);
+    /* Use var(--shadow) */
     cursor: pointer;
     z-index: 2;
     transition: background .15s;
@@ -630,6 +797,7 @@ main {
 .carousel-btn:hover,
 .carousel-btn:focus {
     background: #eaf2ff;
+    /* Specific hover background, could be a new variable */
 }
 
 .carousel-dots {
@@ -643,6 +811,7 @@ main {
     width: 13px;
     height: 13px;
     background: #dbe8ff;
+    /* Specific dot background, could be a new variable */
     border: none;
     border-radius: 50%;
     display: inline-block;
@@ -651,7 +820,8 @@ main {
 }
 
 .carousel-dot.active {
-    background: #5a91ff;
+    background: var(--accent);
+    /* Use var(--accent) */
     box-shadow: 0 0 0 2px #b7cfff33;
 }
 
@@ -667,6 +837,7 @@ main {
     text-align: center;
     font-size: 1.1em;
     color: #555;
+    /* Could be a new muted variable for text */
     margin-top: 0.5em;
 }
 
