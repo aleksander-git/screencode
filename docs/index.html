@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ScreenCode – Effortless AI Interview Solutions</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+        content="ScreenCode: Capture interview tasks and get instant AI solutions in a transparent overlay window on your Mac. Secure, customizable, and open source.">
+    <meta property="og:title" content="ScreenCode – Effortless AI Interview Solutions">
+    <meta property="og:description"
+        content="Take a photo of an interview task, get an AI solution instantly, and display it in a discreet overlay. Secure Google Sign-In, Cloud upload, and custom UI.">
+    <meta property="og:image" content="https://aleksander-git.github.io/ScreenCode/assets/og-image.png">
+    <meta property="og:url" content="https://aleksander-git.github.io/ScreenCode/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ScreenCode – Effortless AI Interview Solutions">
+    <meta name="twitter:description"
+        content="Take a photo of an interview task, get an instant AI solution in a transparent overlay.">
+    <meta name="twitter:image" content="https://aleksander-git.github.io/ScreenCode/assets/og-image.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/favicon.ico">
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/image.png" alt="ScreenCode Logo" height="32" />
+            </div>
+            <nav>
+                <a href="#features">Features</a>
+                <a href="#how">How It Works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="https://github.com/aleksander-git/ScreenCode" target="_blank" rel="noopener">GitHub</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>From screenshot to solution</h1>
+                    <p>
+                        Instantly capture coding interview tasks with a screenshot and get an
+                        AI-generated solution in a transparent overlay—visible only to you.
+                    <div class="cta-btns">
+                        <a href="https://github.com/aleksander-git/ScreenCode/releases" class="cta-btn" target="_blank"
+                            rel="noopener">Download for macOS</a>
+                        <button class="cta-btn cta-btn-disabled" disabled>
+                            Download for Windows
+                        </button>
+                    </div>
+                    <div class="cta-note">
+                        <span class="windows-note">Windows version is under development.</span>
+                    </div>
+                    <!-- <p class="hero-note">
+                        Open source • No data stored • Works offline after sign-in
+                    </p> -->
+                </div>
+                <!-- <div class="hero-image">
+                    <img src="assets/mac-mockup.png" alt="ScreenCode App Screenshot" />
+                </div> -->
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2>Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <span class="feature-icon">📸</span>
+                        <h3>Hotkey Screenshot</h3>
+                        <p>Capture interview tasks instantly using a global keyboard shortcut.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">☁️</span>
+                        <h3>Secure Cloud Upload</h3>
+                        <p>Uploads are signed and secure, ensuring privacy.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🤖</span>
+                        <h3>AI-Powered Solutions</h3>
+                        <p>Get instant, high-quality answers from an advanced AI backend.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🖥️</span>
+                        <h3>Invisible Overlay</h3>
+                        <p>Solutions are shown in a transparent window, hidden from screen sharing.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🔒</span>
+                        <h3>Google Sign-In</h3>
+                        <p>Authenticate quickly and securely with your Google account.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🎨</span>
+                        <h3>Customizable UI</h3>
+                        <p>Choose your preferred language and window size for the solution display.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="screenshot-carousel-section">
+            <h2>What it looks like</h2>
+            <div class="carousel" id="screenshot-carousel">
+                <button class="carousel-btn left" aria-label="Previous screenshot">&#8592;</button>
+                <div class="carousel-track">
+                    <figure class="carousel-slide active">
+                        <img src="assets/screenshot_for_you.png" alt="ScreenCode main window" />
+                        <figcaption>This is how you see you screen</figcaption>
+                    </figure>
+                    <figure class="carousel-slide">
+                        <img src="assets/screenshot_for_others.png" alt="AI solution overlay" />
+                        <figcaption>This is how others see you screen when you share</figcaption>
+                    </figure>
+                    <figure class="carousel-slide">
+                        <img src="assets/settings.png" alt="Settings panel" />
+                        <figcaption>Settings of the app</figcaption>
+                    </figure>
+                </div>
+                <button class="carousel-btn right" aria-label="Next screenshot">&#8594;</button>
+            </div>
+            <div class="carousel-dots" id="carousel-dots"></div>
+        </section>
+
+
+        <section id="how" class="how-section">
+            <div class="container">
+                <h2>How It Works</h2>
+                <ol class="how-list">
+                    <li>
+                        <span class="how-step">1</span>
+                        <div>
+                            <strong>Capture.</strong> Press the hotkey to take a screenshot of the interview task.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="how-step">2</span>
+                        <div>
+                            <strong>Upload.</strong> The image is securely sent to an AI backend, which returns an
+                            answer.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="how-step">3</span>
+                        <div>
+                            <strong>Display.</strong> The solution is shown in a transparent overlay window on
+                            your desktop.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="how-step">4</span>
+                        <div>
+                            <strong>Use.</strong> The window is invisible in screen sharing and most screen capture
+                            tools.
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Pricing Section Start -->
+        <section class="pricing-section" id="pricing">
+            <div class="pricing-title">Choose Your Plan</div>
+            <div class="pricing-subtitle">Flexible subscriptions for every workflow.</div>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <div class="pricing-label">Monthly</div>
+                    <div class="pricing-desc">Great for one-time interviews or short-term use.</div>
+                    <div class="pricing-price" style="font-size:1.9em;">$40 / month</div>
+                    <div class="pricing-term">every month</div>
+                    <ul class="pricing-features">
+                        <li>All ScreenCode features</li>
+                        <li>Instant AI answers</li>
+                    </ul>
+                    <a class="pricing-btn" href="https://pay.example.com/one-month" target="_blank">Subscribe 1
+                        Month</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-label">6 Months</div>
+                    <div class="pricing-desc">Best for ongoing interview preparation and regular practice.</div>
+                    <div class="pricing-price" style="font-size:1.9em;">$30 / month</div>
+                    <div class="pricing-term">$180 every 6 months</div>
+                    <ul class="pricing-features">
+                        <li>All ScreenCode features</li>
+                        <li>AI answers & updates</li>
+                        <li>Save 25% vs. monthly</li>
+                    </ul>
+                    <a class="pricing-btn" href="https://pay.example.com/six-months" target="_blank">Subscribe 6
+                        Months</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-label">1 Year</div>
+                    <div class="pricing-desc">For dedicated learners and professionals who want the best deal.</div>
+                    <div class="pricing-price" style="font-size:1.9em;">$20 / month</div>
+                    <div class="pricing-term">$240 every year</div>
+                    <ul class="pricing-features">
+                        <li>All ScreenCode features</li>
+                        <li>AI answers & updates</li>
+                        <li>Save 50% vs. monthly</li>
+                    </ul>
+                    <a class="pricing-btn" href="https://pay.example.com/year" target="_blank">Subscribe 1 Year</a>
+                </div>
+            </div>
+            <div style="margin-top:2em;font-size:.99em;color:#789;">
+                <b>Questions?</b> <a href="mailto:av.user.74@gmail.com">Contact support</a>
+            </div>
+        </section>
+        <!-- Pricing Section End -->
+
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <h2>User Feedback</h2>
+                <div class="testimonials-grid">
+                    <blockquote>
+                        <p>
+                            “ScreenCode made my remote interviews so much easier. The overlay is truly invisible on
+                            screen sharing—genius!”
+                        </p>
+                        <footer>— <b>Julia</b>, Software Engineer</footer>
+                    </blockquote>
+                    <blockquote>
+                        <p>
+                            “I love the instant AI answers and the ability to change the window size. Highly
+                            recommended!”
+                        </p>
+                        <footer>— <b>Ravi</b>, Coding Bootcamp Graduate</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>FAQ</h2>
+                <details>
+                    <summary>Is the overlay transparent and click-through?</summary>
+                    <p>
+                        Yes! The overlay is fully transparent and click-through: you can click on items behind it, and
+                        using the overlay does <strong>not</strong> change the focus of your main app or window.
+                    </p>
+                </details>
+                <details>
+                    <summary>Is my data secure?</summary>
+                    <p>Yes! No personal data is stored on the server.
+                        Authentication via Google Sign-In.</p>
+                </details>
+                <details>
+                    <summary>Will the overlay show up in screen sharing or recordings?</summary>
+                    <p>No, the transparent overlay is designed to be invisible in screen sharing and most screen capture
+                        tools. But test it before using on an interview </p>
+                </details>
+                <details>
+                    <summary>Does it work with Zoom?</summary>
+                    <p>Yes, all you have to do is enable Advanced capture with window filtering. But test it before
+                        using on an interview </p>
+                </details>
+                <details>
+                    <summary>Can I choose the programming language for the task solution?</summary>
+                    <p>Yes, set your preferred language in the app settings.</p>
+                </details>
+                <details>
+                    <summary>Can I choose the language the text is written for the answer?</summary>
+                    <p>Yes, set your preferred language in the app settings.</p>
+                </details>
+                <details>
+                    <summary>How do I get help or report a bug?</summary>
+                    <p> Email <a href="mailto:av.user.74@gmail.com">av.user.74@gmail.com</a>.</p>
+                </details>
+                <details>
+                    <summary>Is there a free plan?</summary>
+                    <p> No, but you can have a couple of screenshots for free</a>.</p>
+                </details>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <strong>ScreenCode</strong> &copy; 2025
+                    <br>
+                    <a href="https://github.com/aleksander-git">by aleksander-git</a>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/aleksander-git/ScreenCode" target="_blank" rel="noopener">GitHub</a>
+                    <a href="mailto:av.user.74@gmail.com">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
