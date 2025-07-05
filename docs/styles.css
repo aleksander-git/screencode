@@ -851,3 +851,96 @@ main {
     object-fit: contain;
     border-radius: 16px;
 }
+
+.legal-page-section {
+    padding-top: 3em;
+    /* Give some space below the header */
+    padding-bottom: 3em;
+    text-align: left;
+    /* Align text left within the section */
+}
+
+.legal-page-section h1 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 1.5em;
+    font-size: 2.2em;
+}
+
+.legal-page-section .legal-heading {
+    text-align: center;
+    font-size: 1.1em;
+    color: var(--fg);
+    margin-bottom: 1em;
+    max-width: 800px;
+    /* Constrain width for readability */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.legal-page-section .legal-details {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2em;
+    margin-top: 2em;
+    border: 1px solid #e7eaf3;
+    max-width: 700px;
+    /* Constrain width of the details box */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.legal-page-section .legal-details h2 {
+    color: var(--accent);
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.legal-page-section .legal-details p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 1em;
+    color: var(--fg);
+}
+
+.legal-page-section .legal-details .note {
+    font-size: 0.9em;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: -0.5em;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+.legal-page-section .legal-details .disclaimer {
+    font-size: 0.9em;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: 2em;
+    border-top: 1px solid #eee;
+    padding-top: 1.5em;
+    text-align: center;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 600px) {
+    .legal-page-section {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    .legal-page-section h1 {
+        font-size: 1.8em;
+    }
+
+    .legal-page-section .legal-details {
+        padding: 1.5em;
+    }
+
+    .legal-page-section .legal-details h2 {
+        font-size: 1.3em;
+    }
+}
