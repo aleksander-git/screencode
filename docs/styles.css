@@ -59,19 +59,66 @@ a:hover {
     /* Prevents logo from shrinking on small screens */
 }
 
-/* Desktop Navigation Styles */
+/* Header Navigation Styles (Desktop) */
+.header .main-nav {
+    display: flex;
+    /* Ensure it's a flex container for alignment */
+    align-items: center;
+    /* Vertically align items */
+    gap: 2em;
+    /* Space between nav links and lang switcher */
+}
+
 .header .main-nav a {
-    /* Updated selector to target .main-nav */
-    margin-left: 2em;
     font-weight: 500;
     color: var(--primary);
     text-decoration: none;
     /* Ensure no underline by default */
+    margin-left: 0;
+    /* Reset margin as we are using gap */
+    flex-shrink: 0;
+    /* Prevent links from shrinking if space is tight */
 }
 
 .header .main-nav a:hover {
     color: var(--accent);
 }
+
+/* Language Switcher Styling */
+.lang-switcher {
+    margin-left: auto;
+    /* Pushes the language switcher to the right */
+    display: flex;
+    align-items: center;
+    font-size: 0.95em;
+    font-weight: 500;
+    gap: 0.5em;
+    /* Space between EN, |, RU */
+}
+
+.lang-switcher a {
+    color: var(--primary);
+    /* Default color for language links */
+    text-decoration: none;
+    padding: 0.2em 0;
+    /* Small padding for clickable area */
+    transition: color 0.18s ease;
+}
+
+.lang-switcher a:hover {
+    color: var(--accent);
+}
+
+.lang-switcher .lang-active {
+    font-weight: 700;
+    /* Make the active language stand out */
+    color: var(--accent);
+    /* Accent color for active language */
+    pointer-events: none;
+    /* Prevent clicking the active language */
+    cursor: default;
+}
+
 
 /* ------------------------------------- */
 /* NEW CSS for Mobile Responsiveness (Header/Nav) */
@@ -186,6 +233,20 @@ a:hover {
 
     .menu-toggle.active .hamburger:nth-child(3) {
         transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Adjust language switcher for mobile */
+    .lang-switcher {
+        margin-left: 0;
+        /* Remove auto margin on mobile */
+        width: 100%;
+        /* Make it full width */
+        justify-content: center;
+        /* Center the language options */
+        padding: 0.8rem 1.5rem;
+        /* Match nav link padding */
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        /* Separator */
     }
 }
 

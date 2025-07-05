@@ -6,7 +6,7 @@
     <title>ScreenCode – Effortless AI Interview Solutions</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description"
-        content="ScreenCode: Capture interview tasks and get instant AI solutions in a transparent overlay window on your Mac. Secure, customizable, and open source.">
+        content="ScreenCode: Capture interview tasks and get instant AI solutions in a transparent overlay window.">
     <meta property="og:title" content="ScreenCode – Effortless AI Interview Solutions">
     <meta property="og:description"
         content="Take a photo of an interview task, get an AI solution instantly, and display it in a discreet overlay. Secure Google Sign-In, Cloud upload, and custom UI.">
@@ -19,7 +19,11 @@
     <meta name="twitter:image" content="https://aleksander-git.github.io/ScreenCode/assets/og-image.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/favicon.ico">
-    <script src="scripts.js"></script>
+    <script src="scripts.js" defer></script>
+
+    <link rel="alternate" href="https://aleksander-git.github.io/ScreenCode/ru/index.html" hreflang="ru" />
+    <link rel="alternate" href="https://aleksander-git.github.io/ScreenCode/index.html" hreflang="en" />
+    <link rel="alternate" href="https://aleksander-git.github.io/ScreenCode/index.html" hreflang="x-default" />
 </head>
 
 <body>
@@ -28,16 +32,20 @@
             <div class="logo">
                 <img src="assets/image.png" alt="ScreenCode Logo" height="32" />
             </div>
-            <button class="menu-toggle" aria-label="Toggle navigation">
+            <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="hamburger"></span>
                 <span class="hamburger"></span>
                 <span class="hamburger"></span>
             </button>
-            <nav class="main-nav"> <a href="#features">Features</a>
+            <nav class="main-nav">
+                <a href="#features">Features</a>
                 <a href="#how">How It Works</a>
                 <a href="#pricing">Pricing</a>
                 <a href="#testimonials">Testimonials</a>
                 <a href="https://github.com/aleksander-git/ScreenCode" target="_blank" rel="noopener">GitHub</a>
+                <div class="lang-switcher">
+                    <a href="#" class="lang-active">EN</a> | <a href="ru/index.html">RU</a>
+                </div>
             </nav>
         </div>
     </header>
@@ -49,6 +57,7 @@
                     <p>
                         Instantly capture coding interview tasks with a screenshot and get an
                         AI-generated solution in a transparent overlay—visible only to you.
+                    </p>
                     <div class="cta-btns">
                         <a href="https://github.com/aleksander-git/ScreenCode/releases" class="cta-btn" target="_blank"
                             rel="noopener">Download for macOS</a>
@@ -59,13 +68,7 @@
                     <div class="cta-note">
                         <span class="windows-note">Windows version is under development.</span>
                     </div>
-                    <!-- <p class="hero-note">
-                        Open source • No data stored • Works offline after sign-in
-                    </p> -->
                 </div>
-                <!-- <div class="hero-image">
-                    <img src="assets/mac-mockup.png" alt="ScreenCode App Screenshot" />
-                </div> -->
             </div>
         </section>
 
@@ -112,13 +115,13 @@
             <div class="carousel" id="screenshot-carousel">
                 <button class="carousel-btn left" aria-label="Previous screenshot">&#8592;</button>
                 <div class="carousel-track">
-                    <figure class="carousel-slide active">
+                    <figure class="carousel-slide">
                         <img src="assets/screenshot_for_you.png" alt="ScreenCode main window" />
-                        <figcaption>This is how you see you screen</figcaption>
+                        <figcaption>This is how you see your screen</figcaption>
                     </figure>
                     <figure class="carousel-slide">
                         <img src="assets/screenshot_for_others.png" alt="AI solution overlay" />
-                        <figcaption>This is how others see you screen when you share</figcaption>
+                        <figcaption>This is how others see your screen when you share</figcaption>
                     </figure>
                     <figure class="carousel-slide">
                         <img src="assets/settings.png" alt="Settings panel" />
@@ -166,7 +169,6 @@
             </div>
         </section>
 
-        <!-- Pricing Section Start -->
         <section class="pricing-section" id="pricing">
             <div class="pricing-title">Choose Your Plan</div>
             <div class="pricing-subtitle">Flexible subscriptions for every workflow.</div>
@@ -214,8 +216,6 @@
                 <b>Questions?</b> <a href="mailto:av.user.74@gmail.com">Contact support</a>
             </div>
         </section>
-        <!-- Pricing Section End -->
-
         <section id="testimonials" class="testimonials-section">
             <div class="container">
                 <h2>User Feedback</h2>
@@ -277,7 +277,7 @@
                 </details>
                 <details>
                     <summary>Is there a free plan?</summary>
-                    <p> No, but you can have a couple of screenshots for free</a>.</p>
+                    <p> No, but you can have a couple of screenshots for free.</p>
                 </details>
             </div>
         </section>
@@ -293,10 +293,8 @@
                 <div class="footer-links">
                     <a href="https://github.com/aleksander-git/ScreenCode" target="_blank" rel="noopener">GitHub</a>
                     <a href="mailto:av.user.74@gmail.com">Contact</a>
-                    <a href="legal-info.html">Legal Info</a>
                 </div>
             </div>
-        </div>
         </div>
     </footer>
 </body>

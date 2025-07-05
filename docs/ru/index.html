@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ScreenCode – Решения задач для интервью с помощью ИИ</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+        content="ScreenCode: Сделайте снимок экрана с задачей, мгновенно получите решение с помощью ИИ.">
+    <meta property="og:title" content="ScreenCode – Решения задач для интервью с помощью ИИ">
+    <meta property="og:description"
+        content="Сделайте снимок экрана с задачей и мгновенно получите решение с помощью ИИ. Вход через Google, загрузка в облако и настраиваемый интерфейс.">
+    <meta property="og:image" content="../assets/og-image.png">
+    <meta property="og:url" content="https://aleksander-git.github.io/ScreenCode/ru/index.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ScreenCode – Решения задач для интервью с помощью ИИ">
+    <meta name="twitter:description"
+        content="Сделайте снимок экрана с задачей, мгновенно получите решение с помощью ИИ.">
+    <meta name="twitter:image" content="../assets/og-image.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="../scripts.js" defer></script>
+    <link rel="alternate" href="https://aleksander-git.github.io/ScreenCode/index.html" hreflang="en" />
+    <link rel="alternate" href="https://aleksander-git.github.io/ScreenCode/ru/index.html" hreflang="ru" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/image.png" alt="Логотип ScreenCode" height="32" />
+            </div>
+            <button class="menu-toggle" aria-label="Переключить навигацию" aria-expanded="false"> <span
+                    class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <nav class="main-nav">
+                <a href="#features">Возможности</a>
+                <a href="#how">Как это работает</a>
+                <a href="#pricing">Цены</a>
+                <a href="#testimonials">Отзывы</a>
+                <a href="https://github.com/aleksander-git/ScreenCode" target="_blank" rel="noopener">GitHub</a>
+                <div class="lang-switcher">
+                    <a href="../index.html">EN</a> | <a href="#" class="lang-active">RU</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>От скриншота к решению</h1>
+                    <p>
+                        Сделайте снимок экрана с задачей по программированию и получите
+                        решение с помощью <strong>искусственного интеллекта</strong> в прозрачном окне — видимом только
+                        вам.
+                    </p>
+                    <div class="cta-btns">
+                        <a href="https://github.com/aleksander-git/ScreenCode/releases" class="cta-btn" target="_blank"
+                            rel="noopener">Скачать для macOS</a>
+                        <button class="cta-btn cta-btn-disabled" disabled>
+                            Скачать для Windows
+                        </button>
+                    </div>
+                    <div class="cta-note">
+                        <span class="windows-note">Версия для Windows находится в разработке.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2>Возможности</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <span class="feature-icon">📸</span>
+                        <h3>Скриншот по горячей клавише</h3>
+                        <p>Снимок экрана <strong>с помощью</strong> сочетания клавиш.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">☁️</span>
+                        <h3>Безопасная загрузка в облако</h3>
+                        <p>Скриншоты загружаются в облако для обработки и <strong>недоступны никому</strong>.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🤖</span>
+                        <h3>Решения на основе ИИ</h3>
+                        <p>Получайте мгновенные, высококачественные ответы от продвинутого ИИ.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🖥️</span>
+                        <h3>Окно незаметно никому</h3>
+                        <p>Решения отображаются в прозрачном окне, <strong>невидимом</strong> при демонстрации экрана.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🔒</span>
+                        <h3>Вход через Google</h3>
+                        <p>Аутентификация с помощью учетной записи Google.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🎨</span>
+                        <h3>Настраиваемый интерфейс</h3>
+                        <p>Выберите предпочитаемый язык и размер окна для отображения решения.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="screenshot-carousel-section">
+            <h2>Как это выглядит</h2>
+            <div class="carousel" id="screenshot-carousel">
+                <button class="carousel-btn left" aria-label="Предыдущий скриншот">&#8592;</button>
+                <div class="carousel-track">
+                    <figure class="carousel-slide">
+                        <img src="../assets/screenshot_for_you.png" alt="Основное окно ScreenCode" />
+                        <figcaption>Так вы видите свой экран</figcaption>
+                    </figure>
+                    <figure class="carousel-slide">
+                        <img src="../assets/screenshot_for_others.png" alt="Оверлей с AI-решением" />
+                        <figcaption>Так другие видят ваш экран при демонстрации</figcaption>
+                    </figure>
+                    <figure class="carousel-slide">
+                        <img src="../assets/settings.png" alt="Панель настроек" />
+                        <figcaption>Настройки приложения</figcaption>
+                    </figure>
+                </div>
+                <button class="carousel-btn right" aria-label="Следующий скриншот">&#8594;</button>
+            </div>
+            <div class="carousel-dots" id="carousel-dots"></div>
+        </section>
+
+
+        <section id="how" class="how-section">
+            <div class="container">
+                <h2>Как это работает</h2>
+                <ol class="how-list">
+                    <li>
+                        <span class="how-step">1</span>
+                        <div>
+                            <strong>Скриншот.</strong> Нажмите горячие клавиши, чтобы сделать снимок задания.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="how-step">2</span>
+                        <div>
+                            <strong>Загрузка.</strong> Изображение безопасно отправляется в ИИ, который возвращает
+                            подробное решение.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="how-step">3</span>
+                        <div>
+                            <strong>Отображение.</strong> Решение отображается в <strong>полупрозрачном</strong> окне на
+                            вашем рабочем
+                            столе.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="how-step">4</span>
+                        <div>
+                            <strong>Использование.</strong> Окно невидимо при демонстрации экрана и большинстве средств
+                            записи экрана.
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="pricing-section" id="pricing">
+            <div class="pricing-title">Выберите ваш план</div>
+            <div class="pricing-subtitle">Гибкие тарифы для любых целей.</div>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <div class="pricing-label">Ежемесячно</div>
+                    <div class="pricing-desc">Отлично подходит для разовых интервью или краткосрочного использования.
+                    </div>
+                    <div class="pricing-price" style="font-size:1.9em;">$40 / месяц</div>
+                    <div class="pricing-term">каждый месяц</div>
+                    <ul class="pricing-features">
+                        <li>Все функции ScreenCode</li>
+                        <li>Мгновенные ИИ-ответы</li>
+                    </ul>
+                    <a class="pricing-btn" href="https://pay.example.com/one-month" target="_blank">Подписаться на 1
+                        месяц</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Самый популярный</div>
+                    <div class="pricing-label">6 месяцев</div>
+                    <div class="pricing-desc">Лучший вариант для постоянной подготовки к интервью и регулярной практики.
+                    </div>
+                    <div class="pricing-price" style="font-size:1.9em;">$30 / месяц</div>
+                    <div class="pricing-term">$180 каждые 6 месяцев</div>
+                    <ul class="pricing-features">
+                        <li>Все функции ScreenCode</li>
+                        <li>ИИ-ответы и обновления</li>
+                        <li>Экономия 25% по сравнению с ежемесячной оплатой</li>
+                    </ul>
+                    <a class="pricing-btn" href="https://pay.example.com/six-months" target="_blank">Подписаться на 6
+                        месяцев</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-label">1 год</div>
+                    <div class="pricing-desc">Для целеустремленных учеников и профессионалов, которые хотят лучшего
+                        предложения.</div>
+                    <div class="pricing-price" style="font-size:1.9em;">$20 / месяц</div>
+                    <div class="pricing-term">$240 каждый год</div>
+                    <ul class="pricing-features">
+                        <li>Все функции ScreenCode</li>
+                        <li>ИИ-ответы и обновления</li>
+                        <li>Экономия 50% по сравнению с ежемесячной оплатой</li>
+                    </ul>
+                    <a class="pricing-btn" href="https://pay.example.com/year" target="_blank">Подписаться на 1 год</a>
+                </div>
+            </div>
+            <div style="margin-top:2em;font-size:.99em;color:#789;">
+                <b>Вопросы?</b> <a href="mailto:av.user.74@gmail.com">Связаться со службой поддержки</a>
+            </div>
+        </section>
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <h2>Отзывы пользователей</h2>
+                <div class="testimonials-grid">
+                    <blockquote>
+                        <p>
+                            “ScreenCode значительно упростил мои удаленные интервью. Оверлей действительно невидимый
+                            при демонстрации экрана — гениально!”
+                        </p>
+                        <footer>— <b>Юлия</b>, Инженер-программист</footer>
+                    </blockquote>
+                    <blockquote>
+                        <p>
+                            “Мне нравятся мгновенные ИИ-ответы и возможность изменять размер окна. Очень рекомендую!”
+                        </p>
+                        <footer>— <b>Рави</b>, Выпускник школы программирования</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Часто задаваемые вопросы</h2>
+                <details>
+                    <summary>Можно ли кликнуть <strong>сквозь</strong> программу?</summary>
+                    <p>
+                        Да, вы можете нажимать на элементы,
+                        находящиеся за окном. Использование программы <strong>не</strong> изменяет фокус вашего
+                        основного
+                        приложения или окна.
+                    </p>
+                </details>
+                <details>
+                    <summary>Мои данные в безопасности?</summary>
+                    <p>Да! Персональные данные не хранятся на серверах.
+                        Аутентификация через Google Sign-In.</p>
+                </details>
+                <details>
+                    <summary>Будет ли программа видна при демонстрации экрана или записи?</summary>
+                    <p>Нет, программа разработана так, чтобы быть невидимой при демонстрации экрана. Однако, лучше
+                        протестируйте перед использованием на интервью.</p>
+                </details>
+                <details>
+                    <summary>Работает ли это с Zoom?</summary>
+                    <p>Да, все, что нужно сделать, это включить расширенный захват с фильтрацией окон (Advanced capture
+                        with window filtering).
+                        Протестируйте перед использованием на интервью.</p>
+                </details>
+                <details>
+                    <summary>Могу ли я выбрать язык программирования для решения задачи?</summary>
+                    <p>Да, установите предпочитаемый язык в настройках приложения.</p>
+                </details>
+                <details>
+                    <summary>Могу ли я выбрать язык, на котором написан ответ?</summary>
+                    <p>Да, установите предпочитаемый язык в настройках приложения.</p>
+                </details>
+                <details>
+                    <summary>Как получить помощь или сообщить об ошибке?</summary>
+                    <p> Напишите на почту <a href="mailto:av.user.74@gmail.com">av.user.74@gmail.com</a>.</p>
+                </details>
+                <details>
+                    <summary>Есть ли бесплатный план?</summary>
+                    <p> Нет, но вы можете сделать пару скриншотов бесплатно.</p>
+                </details>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <strong>ScreenCode</strong> &copy; 2025
+                    <br>
+                    <a href="https://github.com/aleksander-git">от aleksander-git</a>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/aleksander-git/ScreenCode" target="_blank" rel="noopener">GitHub</a>
+                    <a href="mailto:av.user.74@gmail.com">Контакты</a> <a href="legal-info.html">Правовая информация</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
